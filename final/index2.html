@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment & Account Creation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="payment-container">
+      <div class="row">
+        <!-- Left Column - Payment Form -->
+        <div class="col-lg-7 pe-lg-5">
+          <img src="assets/logo.svg" alt="Nexus Logo" class="logo" />
+
+          <div class="detail-cont">
+            <div class="mb-4">
+              <h6 class="text-muted mb-3">Billed To</h6>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Jane Smith"
+                value=""
+                readonly
+              />
+            </div>
+
+            <div class="mb-4">
+              <h6 class="text-muted mb-3">Payment Details</h6>
+              <div class="d-flex gap-3 mb-4">
+                <div
+                  class="payment-option active flex-grow-1"
+                  onclick="toggleActive(this)"
+                >
+                  <div class="d-flex align-items-center">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="me-2"
+                    >
+                      <rect
+                        x="1"
+                        y="4"
+                        width="22"
+                        height="16"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <line x1="1" y1="10" x2="23" y2="10"></line>
+                    </svg>
+                    <div>
+                        Credit Card
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="payment-option flex-grow-1"
+                  onclick="toggleActive(this)"
+                >
+                  <div class="d-flex align-items-center">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      class="me-2"
+                    >
+                      <path
+                        d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                      ></path>
+                    </svg>
+                    <div>
+                        Credit Card
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3 input-with-icon">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="6508 8234 3354 7632"
+                />
+                <span class="input-icon">
+                    <img src="assets/trailing-icon.svg" alt="icon" />
+                </span>
+            </div>
+            
+              <div class="row">
+                <div class="col-6">
+                  <input type="text" class="form-control" placeholder="21/04" />
+                </div>
+                <div class="col-6">
+                  <input type="text" class="form-control" placeholder="786" />
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <select class="form-select">
+                <option selected>United States</option>
+                <option>Canada</option>
+                <option>United Kingdom</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="102258"
+                value=""
+                readonly
+              />
+            </div>
+
+            <div class="mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms" />
+                <label class="form-check-label" for="terms">
+                  By subscribing to Nexus Yachting, you confirm you are 18 or
+                  over, and that you agree to our
+                  <a href="#" class="terms-link">Privacy Policy</a>,
+                  <a href="#" class="terms-link">License Terms</a>, and
+                  <a href="#" class="terms-link">User Terms</a>, including our
+                  <a href="#" class="terms-link">End User Policy</a>.
+                </label>
+              </div>
+            </div>
+
+            <button class="submit-btn custum-btn">Submit</button>
+            <button class="back-btn custum-btn">Back</button>
+          </div>
+        </div>
+
+        <!-- Right Column - Plan Details -->
+        <div class="col-lg-5">
+          <div class="plan-card">
+            <h4 class="mb-4">Starter Plan</h4>
+
+            <div class="plan-option">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="form-check" onclick="toggleActiveClass(this)">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="planOption"
+                  />
+                </div>
+                <div>
+                  <div>Pay Monthly</div>
+                  <div class="text-muted">$1 / Month</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="plan-option active">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="form-check" onclick="toggleActiveClass(this)">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="planOption"
+                    checked
+                  />
+                </div>
+                <div>
+                  <div>Pay Annual</div>
+                  <div class="text-muted">
+                    $1 / Month, Pay for 12 months once
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="save-badge custum-btn">Save 15%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="mb-0">Total</h5>
+                <h5 class="mb-0">$1 / Month</h5>
+              </div>
+              <p class="security-text small-grey-text">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect
+                    x="3"
+                    y="11"
+                    width="18"
+                    height="11"
+                    rx="2"
+                    ry="2"
+                  ></rect>
+                  <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                </svg>
+                Guaranteed to be safe & secure, ensuring that all transactions
+                are protected with the highest level of security.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleActive(clickedElement) {
+        // Remove 'active' class from all payment-option elements
+        const allPaymentOptions = document.querySelectorAll(".payment-option");
+        allPaymentOptions.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        // Add 'active' class to the clicked .payment-option
+        clickedElement.classList.add("active");
+      }
+
+      function toggleActiveClass(clickedElement) {
+        // Remove 'active' class from all plan-option elements
+        const allPlanOptions = document.querySelectorAll(".plan-option");
+        allPlanOptions.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        // Add 'active' class to the parent .plan-option of the clicked .form-check
+        const parentPlanOption = clickedElement.closest(".plan-option");
+        parentPlanOption.classList.add("active");
+      }
+    </script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

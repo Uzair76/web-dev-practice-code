@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Details</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+   <style>
+:root {
+    --primary-teal: linear-gradient(to right, #4ac4d6, #1b7a88);
+    --light-gray: #dfeeed;
+    --purple: #9333ea;
+    --text-gray: #707f8f;
+}
+
+body {
+    background-image: 
+        repeating-linear-gradient(
+            -45deg,
+            #f8f9fa,
+            #f8f9fa 10px,
+            #ffffff 10px,
+            #ffffff 20px
+        ),
+        repeating-linear-gradient(
+            45deg,
+            #f8f9fa,
+            #f8f9fa 10px, 
+            #ffffff 10px,
+            #ffffff 20px
+        );
+    background-position: right, left;
+    background-size: 50% 100%, 50% 100%;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+
+.card {
+    border: none;
+    border-radius: 15px;
+    width: 65rem;
+    margin-left: -150px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); */
+    background-color: transparent; /* Make background color transparent */
+}
+
+.card-body {
+    padding: 0rem;
+    background-color: transparent; /* Make background color transparent */
+}
+
+
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.profile-circle.purple {
+    background-color: var(--purple);
+}
+
+.profile-circle.gray {
+    background-color: #6c757d;
+}
+
+.uploud-cont {
+    border: none; /* Remove border */
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+    background-color: white;
+    margin: 20px 0px;
+    box-shadow: 0 4px 8px rgba(74, 196, 214, 0.5), 0 -4px 8px rgba(74, 196, 214, 0.5); /* Shadow on all sides (top included) */
+}
+
+.uploud-cont:hover {
+    box-shadow: 0 6px 12px rgba(74, 196, 214, 0.7), 0 -6px 12px rgba(74, 196, 214, 0.7); /* Enhanced shadow on hover */
+}
+
+
+.upload-box {
+    border: 2px dashed #4a9595;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.upload-box:hover {
+    border-color: #1b1c1e;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.upload-box label {
+    cursor: pointer;
+    display: block;
+}
+
+.upload-box div {
+    color: #495057;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+.upload-icon{
+    height: 30px;
+    width: 30px;
+}
+.selected{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    background-color: #c2dcf6;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 0px 10px ;
+}
+.form-check{
+    max-width: 40rem;
+}
+
+.main-container .logo-container{
+    margin-left: 2rem;
+}
+
+
+
+@media (max-width: 992px) {
+    .main-container {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .main-container {
+        padding: 0.5rem;
+    }
+    
+    .card-body {
+        padding: 0.5rem;
+    }
+
+    .upload-box {
+        padding: 1rem;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo-container">
+            <img src="assets/logo.svg" alt="Nexus Logo" class="logo margin-m1" />
+          </div>
+        <div class="container d-cont">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body p-4">
+                         
+
+                            <!-- Title -->
+                            <div class="text-center mb-4">
+                                <h2 class="h4 mb-1 main-heading">Professional Information</h2>
+                                <p class="text-muted small small-grey-text">All Required Fields Are Optional</p>
+                            </div>
+
+                            <!-- Form -->
+                            <form>
+                                <div class="mb-3">
+                                    <select class="form-select">
+                                        <option selected>Qualifications</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <select class="form-select">
+                                        <option selected>Passport</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <select class="form-select">
+                                        <option selected>Visa Type</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <select class="form-select">
+                                        <option selected>Medical Certificate</option>
+                                    </select>
+                                </div>
+
+                                <!-- Upload Boxes -->
+                              <div class="uploud-cont">
+                                <div class="upload-box">
+                                    <input type="file" id="resume" class="d-none">
+                                    <label for="resume" class="mb-0">
+                                        <img src="assets/upload-icon.svg" alt="resume" class="upload-icon">
+                                        <div class="small-grey-text">Resume Upload</div>
+                                        
+                                    </label>
+                                    
+                                </div>
+                                <div class="selected">
+                                    <i class="fa-solid fa-file-arrow-up"></i>
+                                    <div>
+                                        <small class="text-muted">No selected File-</small>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <div class="uploud-cont">
+                                <div class="upload-box">
+                                    <input type="file" id="document" class="d-none">
+                                    <label for="document" class="mb-0">
+                                        <img src="assets/upload-icon.svg" alt="doc" class="upload-icon">
+                                        <div class="small-grey-text">Document Upload</div>
+                                        
+                                    </label>
+                                </div>
+                                <div class="selected">
+                                    <i class="fa-solid fa-file-arrow-up"></i>
+                                    <div>
+                                        <small class="text-muted">No selected File-</small>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                             </div>
+
+                                <!-- Terms Checkbox -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" id="terms" />
+                                      <label class="form-check-label" for="terms">
+                                        By subscribing to Nexus Yachting, you confirm you are 18 or
+                                        over, and that you agree to our
+                                        <a href="#" class="terms-link">Privacy Policy</a>,
+                                        <a href="#" class="terms-link">License Terms</a>, and
+                                        <a href="#" class="terms-link">User Terms</a>, including our
+                                        <a href="#" class="terms-link">End User Policy</a>.
+                                      </label>
+                                    </div>
+                                  </div>
+
+                                <!-- Buttons -->
+                                <button type="submit" class=" custum-btn submit-btn">Submit</button>
+                                <button type="button" class=" custum-btn back-btn">Back</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // File upload preview
+        document.querySelectorAll('input[type="file"]').forEach(input => {
+            input.addEventListener('change', function(e) {
+                const fileName = e.target.files[0]?.name;
+                if (fileName) {
+                    const label = this.nextElementSibling;
+                    label.querySelector('div').textContent = fileName;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

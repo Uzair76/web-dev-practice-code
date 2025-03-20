@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Improved Layout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .account-heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+            margin-top: 70px;
+            margin-bottom: 20px;
+
+        }
+        .account-heading h1{
+            font-size: 2rem;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Logo Section -->
+    <div class="logo-container">
+      <img src="assets/logo.svg" alt="Nexus Logo" class="logo margin-m1" />
+    </div>
+      <!-- Background Shapes Section -->
+      <div class="bg-image-container">
+        <img src="assets/circle.png" alt="Circle" class="circle" />
+        <img src="assets/shape1.png" alt="Shape1" class="shape1" />
+      </div>
+      <img src="assets/left-illustration.png" alt="Shape1" class="shape2" />
+    <div class="account-heading">
+        <h1 class="main-heading">
+            Create your Account
+        </h1>
+    </div>
+    <img
+    src="assets/illustration3.svg"
+    alt="illustratin"
+    class="right-illustration"
+  />
+
+
+    <section id="profile" class="margin-m1">
+        <div class="profile-upload">
+            <img src="assets/profile.png" alt="Profile picture">
+            <!-- Camera Icon -->
+            <div class="camera-icon">
+                <img src="assets/camera.svg" alt="Camera Icon">
+            </div>
+        </div>
+        <h2 class="heading_bold main-heading">Add Personal Details</h2>
+        <p class="p-tag small-grey-text">Please add your information correctly</p>
+        <form>
+            <div class="row" >
+                <!-- Full Name -->
+                <div class="col-12 mb-3">
+                    <div class="input-wrapper">
+                        <label for="fullName" class="fixed-label">First Name</label>
+                        <input type="text" id="fullName" class="input-field" placeholder="Enter Your Full Name" required>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <!-- Email and Phone Number -->
+                <div class="col-md-6 mb-3">
+                    <div class="input-wrapper">
+                        <label for="email" class="fixed-label">Email</label>
+                        <input type="email" id="email" class="input-field" placeholder="Enter your correct email address for the correspondence " required>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="input-wrapper">
+                        <label for="phone" class="fixed-label">Phone Number</label>
+                        <input type="tel" id="phone" class="input-field" placeholder="Enter Your Phone Number" required>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <!-- Password and Confirm Password -->
+                <div class="col-md-6 mb-3">
+                    <div class="input-wrapper">
+                        <label for="password" class="fixed-label">Password</label>
+                        <input type="password" id="password" class="input-field" placeholder="Enter Your Password" required>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="input-wrapper">
+                        <label for="confirmPassword" class="fixed-label">Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="input-field" placeholder="Confirm Your Password" required>
+                    </div>
+                </div>
+            </div>
+        
+            <p class="p-tag small-grey-text">After filling the form, please double-check and click next for payment.</p>
+            <div class="button-wrapper">
+                <button type="submit" class="btn-submit custum-btn">Next</button>
+            </div>
+                </form>
+        
+        
+    </section>
+ 
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
